@@ -48,4 +48,5 @@ const cardArray = [
         img: 'img/pizza.png',
     },
     
-]
+    ]
+    console.log(cardArray)
