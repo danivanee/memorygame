@@ -57,6 +57,7 @@ const cardArray = [
     function createBoard() {
         for (let i = 0; i < 10; i++) {
             const card = document.createElement('img')
+            card.setAttribute('src', 'img/blank.png')
             console.log(card, i)
         }
     }
