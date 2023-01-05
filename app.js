@@ -1,54 +1,53 @@
 const cardArray = [
     {
         name: 'fries',
-        img: 'img/fries.png',
+        img: 'images/fries.png',
     },
     {
         name: 'cheeseburger',
-        img: 'img/cheeseburger.png',
+        img: 'images/cheeseburger.png',
     },
     {
         name: 'hotdog',
-        img: 'img/hotdog.png',
+        img: 'images/hotdog.png',
     },
     {
         name: 'ice-cream',
-        img: 'img/ice-cream.png',
+        img: 'images/ice-cream.png',
     },
     {
         name: 'milkshake',
-        img: 'img/milkshake.png',
+        img: 'images/milkshake.png',
     },
     {
         name: 'pizza',
-        img: 'img/pizza.png',
+        img: 'images/pizza.png',
     },
     {
         name: 'fries',
-        img: 'img/fries.png',
+        img: 'images/fries.png',
     },
     {
         name: 'cheeseburger',
-        img: 'img/cheeseburger.png',
+        img: 'images/cheeseburger.png',
     },
     {
         name: 'hotdog',
-        img: 'img/hotdog.png',
+        img: 'images/hotdog.png',
     },
     {
         name: 'ice-cream',
-        img: 'img/ice-cream.png',
+        img: 'images/ice-cream.png',
     },
     {
         name: 'milkshake',
-        img: 'img/milkshake.png',
+        img: 'images/milkshake.png',
     },
     {
         name: 'pizza',
-        img: 'img/pizza.png',
+        img: 'images/pizza.png',
     },
-    
-    ]
+]
 
     cardArray.sort(() => 0.5 - Math.random())
 
@@ -57,7 +56,8 @@ const cardArray = [
     function createBoard() {
         for (let i = 0; i < 10; i++) {
             const card = document.createElement('img')
-            card.setAttribute('src', 'img/blank.png')
+            card.setAttribute('src', 'images/blank.png')
+            card.setAttribute('data-id', i)
             console.log(card, i)
         }
     }
