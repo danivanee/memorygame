@@ -58,7 +58,12 @@ const cardArray = [
             const card = document.createElement('img');
             card.setAttribute('src', 'images/blank.png')
             card.setAttribute('data-id', i)
+            
             gridDisplay.appendChild(card);
         }
     }
     createBoard()
+
+    function flipCard() {
+
+    }
