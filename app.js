@@ -65,5 +65,6 @@ const cardArray = [
     createBoard()
 
     function flipCard() {
+        console.log('clicked')
 
     }
