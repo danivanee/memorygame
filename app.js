@@ -65,6 +65,8 @@ const cardArray = [
     createBoard()
 
     function flipCard() {
-        console.log('clicked')
+        const cardId = this.getAttribute('data-id')
+        console.log(cardArray[cardId])
+        console.log('clicked', cardId)
 
     }
