@@ -63,12 +63,13 @@ function createBoard() {
     gridDisplay.appendChild(card);
   }
 }
-createBoard();
+createBoard()
 
 function flipCard() {
-  console.log(cardArray);
-  const cardId = this.getAttribute("data-id");
-  cardsChosen.push(cardArray[cardId].name);
-  console.log("clicked", cardId);
-  console.log(cardsChosen);
+  console.log(cardArray)
+  const cardId = this.getAttribute('data-id')
+  cardsChosen.push(cardArray[cardId].name)
+  console.log('clicked', cardId)
+  console.log(cardsChosen)
+  this.setAttribute('src', cardArray[cardId].img)
 }
