@@ -52,7 +52,8 @@ const cardArray = [
 cardArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.querySelector("#grid");
-const cardsChosen = [];
+const cardsChosen = []
+const cardsChosenIds = []
 
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
@@ -66,15 +67,23 @@ function createBoard() {
 createBoard()
 
 function checkMatch(){
+const cards = document.querySelectorAll('img')
+console.log(cards)
   console.log('check for match')
+  if (cardsChosen[0] == cardsChosen[1]){
+    alert('You found a match!')
+    cards[cardsChosenIds[0]].setAttribute('src', 'images/white.png')
+    
+  }
 }
 
 function flipCard() {
   //console.log(cardArray)
   const cardId = this.getAttribute('data-id')
   cardsChosen.push(cardArray[cardId].name)
-  //console.log('clicked', cardId)
-  //console.log(cardsChosen)
+  cardsChosenIds.push(cardId)
+  console.log(cardsChosen)
+  console.log(cardsChosenIds)
   this.setAttribute('src', cardArray[cardId].img)
   if (cardsChosen.length === 2) {
   setTimeout( checkMatch, 500)
