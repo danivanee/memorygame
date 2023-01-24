@@ -69,15 +69,26 @@ createBoard()
 
 function checkMatch(){
 const cards = document.querySelectorAll('img')
+const optionOneId = cardsChosenIds[0]
+const optionTwoId = cardsChosenIds[1]
 console.log(cards)
   console.log('check for match')
+  if (optionOneId == optionTwoId) {
+    alert('You have clicked the same image!')
+  }
+
   if (cardsChosen[0] == cardsChosen[1]){
     alert('You found a match!')
-    cards[cardsChosenIds[0]].setAttribute('src', 'images/white.png')
-    cards[cardsChosenIds[1]].setAttribute('src', 'images/white.png')
-    cards[cardsChosenIds[0]].removeEventListener('click', flipCard)
-    cards[cardsChosenIds[1]].removeEventListener('click', flipCard)
+    cards[optionOneId].setAttribute('src', 'images/white.png')
+    cards[optionTwoId].setAttribute('src', 'images/white.png')
+    cards[optionOneId].removeEventListener('click', flipCard)
+    cards[optionTwoId].removeEventListener('click', flipCard)
     cardsWon.push(cardsChosen)
+  } else {
+    cards[optionOneId].setAttribute('src', 'images/blank.png')
+    cards[optionTwoId].setAttribute('src', 'images/blank.png')
+    alert('Sorry try again!')
+
   }
 
   cardsChosen = []
